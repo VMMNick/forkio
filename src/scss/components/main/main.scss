@@ -1,0 +1,149 @@
+.main {
+    position: relative;
+    .block-btn-down {
+      position: absolute;
+      width: 100%;
+      top: -22.5px;
+      text-align: center;
+      &__style {
+        @include style-btn;
+        padding: 13px 26px;
+        font-size: 18px;
+        line-height: 20px;
+        color: $body-primary-text-color;
+        background-color: $body-tretiary-color;
+        transition: 500ms;
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+      &__style:hover {
+        @include hover-btn;
+        border: 2px solid;
+      }
+    }
+    @include tablet {
+      .block-btn-down {
+        top: -32.5px;
+        &__style {
+          padding: 23px 60px;
+          font-size: 21px;
+          line-height: 23px;
+        }
+      }
+    }
+    @include desktop {
+      .block-btn-down {
+        top: -32.5px;
+        &__style {
+          padding: 23px 60px;
+          font-size: 21px;
+          line-height: 23px;
+        }
+      }
+    }
+  
+    .section-talk-people {
+      background-image: url("../img/main/bg-section-talk-people-img.png");
+      @include style-BG;
+      text-align: center;
+      padding: 0px 25px;
+      margin-bottom: -8px;
+      &__title-text {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 48px;
+        color: $body-primary-text-color;
+        padding-top: 57px;
+      }
+      .blocks-description {
+        .firms {
+          padding-bottom: 45px;
+          &__logo--smashing {
+            padding-top: 57px;
+            min-width: 165px;
+            min-height: 43px;
+          }
+          &__logo--codrops {
+            min-width: 148px;
+            min-height: 50px;
+          }
+          &__logo--w {
+            min-width: 64px;
+            min-height: 64px;
+          }
+          &__logo--pixel-buddha {
+            min-width: 225px;
+            min-height: 24px;
+          }
+          &__logo--CB {
+            min-width: 166px;
+            min-height: 34px;
+          }
+          &__logo--TNW {
+            min-width: 108px;
+            min-height: 34px;
+          }
+          &__description {
+            font-family: $font-lato;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 16px;
+            line-height: 24px;
+            color: $body-primary-text-color;
+            padding-top: 33px;
+          }
+        }
+      }
+      &__text {
+        font-family: $font-lato;
+        font-size: 14px;
+        line-height: 21px;
+        color: #a291a5;
+      }
+    }
+    @include tablet {
+      .section-talk-people {
+        background-image: url("../img/main/tablet/bg-section-talk-people-img.png");
+        &__title-text {
+          font-size: 42px;
+          line-height: 44px;
+          padding-top: 85px;
+        }
+        .blocks-description {
+          margin-top: 88px;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(130px, 1fr));
+          grid-template-rows: repeat(3, 1fr);
+          justify-content: space-between;
+          align-items: end;
+          column-gap: calc(16px + (63 - 16) * ((100vw - 320px) / (1200 - 320)));
+          padding-bottom: 23px;
+        }
+      }
+    }
+    @include desktop {
+      .section-talk-people {
+        background-image: url("../img/main/desktop/bg-section-talk-people-img.png");
+        &__title-text {
+          font-size: 48px;
+          line-height: 50px;
+          padding-top: 108px;
+        }
+        .blocks-description {
+          margin-top: 31px;
+          display: grid;
+          grid-template-columns: repeat(3, minmax(200px, 324px));
+          grid-template-rows: repeat(2, 1fr);
+          justify-content: center;
+          align-items: end;
+          column-gap: calc(16px + (87 - 16) * ((100vw - 320px) / (1200 - 320)));
+          padding-bottom: 73px;
+        }
+        &__text {
+          width: 887px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+  
